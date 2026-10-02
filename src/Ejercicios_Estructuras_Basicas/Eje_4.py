@@ -14,9 +14,9 @@ else:
 lluvia2 = int(input("Ingrese lluvia en mm: "))
 
 match lluvia2:
+    case x if x < alertaAmarilla:
+        print("NO EXISTE ALERTA")
     case x if x >= alertaAmarilla:
         print("RIESGO ALERTA AMARILLA")
-    case x if x >= alertaRoja:
-        print("RIESGO ALERTA ROJA")
     case _:
-        print("NO EXISTE ALERTA")
+        print("RIESGO ALERTA ROJA")
