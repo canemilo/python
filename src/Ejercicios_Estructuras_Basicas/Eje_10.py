@@ -21,4 +21,4 @@ else:
 
             if es_primo:
                 print(num, end=" ")
-    print()
+

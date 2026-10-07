@@ -32,3 +32,8 @@ def main():
 # 5.1. Crea la estructura de programa principal
 if __name__ == "__main__":
     main()
+# pip freeze > dependencias.txt
+# # pip install jupyterlab
+## pip freeze > dependencias.txt
+# entorno-practica\Scripts\activate
+# jupyter notebook
