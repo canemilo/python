@@ -2,7 +2,6 @@ pokemons = [
     {
         "nombre": "Bulbasaur",
         "generacion": 1,
-
         "categoria": "Semilla",
         "tipos": ["Planta", "Veneno"],
         "peso_kg": 6.9,
@@ -51,7 +50,6 @@ pokemons = [
     {
         "nombre": "Lucario",
         "generacion": 4,
-
         "categoria": "Aura",
         "tipos": ["Lucha", "Acero"],
         "peso_kg": 54.0,
@@ -75,11 +73,12 @@ pokemons = [
     }
 ]
 
+# AQUÍ ESTÁ EL CAMBIO IMPORTANTE:
+if __name__ == "__main__":
+    mas_pesado = pokemons[0]
 
-mas_pesado = pokemons[0]
+    for p in pokemons:
+        if p.get("peso_kg") > mas_pesado.get("peso_kg"):
+            mas_pesado = p
 
-for p in pokemons:
-    if p.get("peso_kg") > mas_pesado.get("peso_kg"):
-        mas_pesado = p
-
-print(f"El Pokémon más pesado es {mas_pesado['nombre']} con {mas_pesado['peso_kg']} kg.")
+    print(f"El Pokémon más pesado es {mas_pesado['nombre']} con {mas_pesado['peso_kg']} kg.")
